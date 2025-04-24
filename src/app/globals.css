@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+:root {
+  --background: #121212;
+  --foreground: #e0e0e0;
+  --blockly-bg: #1a1a1a;
+  --blockly-text: #e0e0e0;
+  --blockly-grid: #333333;
+  --blockly-toolbox: #222222;
+  --blockly-toolbox-text: #d0d0d0;
+  --blockly-flyout: #222222;
+  --blockly-flyout-text: #d0d0d0;
+  --accent: #505050;
+  --accent-light: #777777;
+  --accent-dark: #404040;
+}
+
+[data-theme="dark"] {
+  --background: #121212;
+  --foreground: #e0e0e0;
+  --blockly-bg: #1a1a1a;
+  --blockly-text: #e0e0e0;
+  --blockly-grid: #333333;
+  --blockly-toolbox: #222222;
+  --blockly-toolbox-text: #d0d0d0;
+  --blockly-flyout: #222222;
+  --blockly-flyout-text: #d0d0d0;
+  --accent: #505050;
+  --accent-light: #777777;
+  --accent-dark: #404040;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Blockly workspace styles */
+.blocklyMainBackground {
+  fill: var(--blockly-bg) !important;
+}
+
+.blocklyToolboxDiv {
+  background-color: var(--blockly-toolbox) !important;
+  color: var(--blockly-toolbox-text) !important;
+}
+
+.blocklyTreeRow {
+  color: var(--blockly-text) !important;
+}
+
+.blocklyText {
+  fill: var(--blockly-text) !important;
+}
+
+.blocklyFlyoutBackground {
+  fill: var(--blockly-flyout) !important;
+}
+
+.blocklyFlyoutLabelText {
+  fill: var(--blockly-flyout-text) !important;
+}
+
+.blocklyScrollbarHandle {
+  fill: var(--blockly-grid) !important;
+}
+
+/* Code preview styles */
+pre {
+  background-color: var(--blockly-bg) !important;
+  color: var(--blockly-text) !important;
+}
+
+/* Button styles */
+button {
+  background-color: var(--accent) !important;
+  color: white !important;
+  border: 1px solid var(--accent-dark) !important;
+}
+
+button:hover {
+  background-color: var(--accent-dark) !important;
+}
